@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"scripts": {
 		"start": "./node_modules/.bin/webpack-dev-server",
-		"build": "./node_modules/.bin/webpack"
+		"build": "./node_modules/.bin/webpack",
+		"lint": "./node_modules/.bin/eslint ./src"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.26.0",
@@ -14,6 +15,11 @@
 		"babel-preset-react": "^6.24.1",
 		"css-loader": "^1.0.0",
 		"dotenv": "^6.0.0",
+		"eslint": "^5.6.1",
+		"eslint-config-airbnb": "^17.1.0",
+		"eslint-plugin-import": "^2.14.0",
+		"eslint-plugin-jsx-a11y": "^6.1.1",
+		"eslint-plugin-react": "^7.11.1",
 		"file-loader": "^2.0.0",
 		"html-webpack-plugin": "^3.2.0",
 		"postcss": "^7.0.5",
@@ -24,6 +30,7 @@
 		"webpack-dev-server": "^3.1.9"
 	},
 	"dependencies": {
+		"babel-eslint": "^10.0.1",
 		"babel-preset-stage-0": "^6.24.1",
 		"basscss": "^8.0.10",
 		"basscss-background-colors": "^2.1.0",
@@ -31,6 +38,7 @@
 		"classnames": "^2.2.6",
 		"postcss-cssnext": "^3.1.0",
 		"postcss-import": "^12.0.0",
+		"prop-types": "^15.6.2",
 		"react": "^16.5.2",
 		"react-dom": "^16.5.2",
 		"whatwg-fetch": "^3.0.0"
