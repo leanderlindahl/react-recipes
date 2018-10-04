@@ -81,32 +81,43 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./index.js":
+/*!******************!*\
+  !*** ./index.js ***!
+  \******************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _log = __webpack_require__(/*! ./log */ \"./src/log.js\");\n\nvar _log2 = _interopRequireDefault(_log);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _log2.default)('Hello World!');\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _log__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./log */ \"./log.js\");\n\n\nObject(_log__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('Hello World!');\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
-/***/ "./src/log.js":
-/*!********************!*\
-  !*** ./src/log.js ***!
-  \********************/
+/***/ "./log.js":
+/*!****************!*\
+  !*** ./log.js ***!
+  \****************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nconst log = (string) => {\n\tconsole.log(string);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (log);\n\n//# sourceURL=webpack:///./log.js?");
+
+/***/ }),
+
+/***/ 0:
+/*!************************************!*\
+  !*** multi ./index.js ./bundle.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n\tvalue: true\n});\nvar log = function log(string) {\n\tconsole.log(string);\n};\n\nexports.default = log;\n\n//# sourceURL=webpack:///./src/log.js?");
+eval("__webpack_require__(/*! /Users/leanderl/Training/linkedin-learning/react-recipes/Ch01/L4/recipes/index.js */\"./index.js\");\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module './bundle.js'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n\n\n//# sourceURL=webpack:///multi_./index.js_./bundle.js?");
 
 /***/ })
 
