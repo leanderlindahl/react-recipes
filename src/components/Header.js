@@ -5,7 +5,7 @@ import Logo from '../static/images/logo.png';
 
 const HeaderLink = ({ children, ...props }) => (
   <NavLink
-    exact 
+    exact
     className="p1 mx2 black text-decoration-none rounded"
     activeClassName="bg-white"
     {...props}

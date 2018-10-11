@@ -12,7 +12,7 @@ const RecipeListItem = ({
     className="py2 border-bottom border-bottom-dashed pointer"
     onClick={() => onClick(recipe.id)}
   >
-    <span 
+    <span
       className="mr1"
       onClick={e => {
         e.stopPropagation();

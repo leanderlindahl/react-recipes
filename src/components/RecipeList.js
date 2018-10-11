@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import RecipeListItem from './RecipeListItem'; 
+import RecipeListItem from './RecipeListItem';
 
 const RecipeList = ({
   style,
