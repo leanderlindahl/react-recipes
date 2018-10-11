@@ -6,8 +6,8 @@
 	"scripts": {
 		"start": "./node_modules/.bin/webpack-dev-server",
 		"build": "./node_modules/.bin/webpack",
-    "lint": "./node_modules/.bin/eslint ./src",
-    "test": "./node_modules/.bin/jest",
+		"lint": "./node_modules/.bin/eslint ./src",
+		"test": "./node_modules/.bin/jest",
 		"precommit": "lint-staged"
 	},
 	"lint-staged": {
@@ -44,6 +44,7 @@
 		"webpack-dev-server": "^3.1.9"
 	},
 	"dependencies": {
+    "react-test-renderer": "^16.5.2",
 		"babel-eslint": "^10.0.1",
 		"babel-preset-stage-0": "^6.24.1",
 		"basscss": "^8.0.10",

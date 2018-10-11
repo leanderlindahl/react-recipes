@@ -24,17 +24,23 @@ const RecipeDetail = props => {
         <span>{recipe.calories}</span>
       </div>
       <h3>Ingredients</h3>
+      { props.recipe.ingredients && (
       <ul>
         {recipe.ingredients.map(ingredient => (
           <li key={ingredient}>{ingredient}</li>
         ))}
       </ul>
+      )
+      }
       <h3>Steps</h3>
-      <ol>
-        {recipe.steps.map(step => (
-          <li key={step}>{step}</li>
-        ))}
-      </ol>
+      { props.recipe.steps && (
+        <ol>
+          {recipe.steps.map(step => (
+            <li key={step}>{step}</li>
+          ))}
+        </ol>
+      )
+      }
       <Link
         to={`/recipe/${props.recipe.id}`}
       >
