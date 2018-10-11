@@ -28,12 +28,14 @@ class App extends React.Component {
 
   toggleFavorite = id => {
     this.setState(({ favorites, ...state }) => {
-      if (favorites.includes(id)) {
-        return { ...state, favorites: favorites.filter(f => f.id !== id) };
+      const idx = favorites.indexOf(id);
+
+      if (idx !== -1) {
+        return { ...state, favorites: favorites.filter(f => f !== id) };
       }
       return { ...state, favorites: [...favorites, id] };
     });
-  }
+  };
 
   render() {
     return (
