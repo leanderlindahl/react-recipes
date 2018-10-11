@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { mount } from 'enzyme';
 import { BrowserRouter } from 'react-router-dom';
 import RecipeListItem from '../components/RecipeListItem';
 
@@ -31,5 +32,40 @@ describe('<RecipeListItem />', () => {
     const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
+  });
+
+  test('Should call onClick when clicked', () => {
+    const onClick = jest.fn();
+
+    const component = mount(
+      <RecipeListItem recipe={testRecipe} onClick={onClick} />
+    );
+    component.simulate('click');
+
+    expect(onClick.mock.calls.length).toBe(1);
+  });
+
+  test('Should call onFavorited when favorited', () => {
+    const onFavorited = jest.fn();
+
+    const component = mount(
+      <RecipeListItem recipe={testRecipe} onFavorited={onFavorited} />
+    );
+    component.find('span').first().simulate('click');
+
+    expect(onFavorited.mock.calls.length).toBe(1);
+  });
+
+  test('Should not call onCick when onFavorited is called', () => {
+    const onClick = jest.fn();
+    const onFavorited = jest.fn();
+
+    const component = mount(
+      <RecipeListItem recipe={testRecipe} onClick={onClick} onFavorited={onFavorited} />
+    );
+    component.find('span').first().simulate('click');
+    
+    expect(onClick.mock.calls.length).toBe(0);
+    expect(onFavorited.mock.calls.length).toBe(1);
   });
 });
